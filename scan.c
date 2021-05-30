@@ -119,7 +119,7 @@ int ScanSure (ADDR_T scanstart)
       goto IsJump;
     }
     if ((instr->mnemonic == S_JSR || instr->mnemonic == S_JMP) &&
-        instr->admode == abs) {
+        instr->admode == aabs) {
       addr = Memory[(ADDR_T)(address + 1)] +
         (Memory[(ADDR_T)(address + 2)] << 8);
 
@@ -156,7 +156,7 @@ int ScanSure (ADDR_T scanstart)
       addr = Memory[(ADDR_T)(address + 1)] +
 	(Memory[(ADDR_T)(address + 2)] << 8);
 
-      if (instr->admode == iabs && (ADDR_T)(addr - StartAddress) <
+      if (instr->admode == (int) iabs && (ADDR_T)(addr - StartAddress) <
 	  (ADDR_T)(EndAddress - StartAddress)) {
 	PutLabel (addr);
 	PutLowByte (addr);
@@ -379,7 +379,7 @@ int ScanPotential (ADDR_T scanstart)
     }
 
     if ((instr->mnemonic == S_JSR || instr->mnemonic == S_JMP) &&
-        instr->admode == abs) {
+        instr->admode == aabs) {
     IsJump:
       if (GetMemFlag (addr)) {
         SetMemFlag (address);

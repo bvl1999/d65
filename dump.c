@@ -147,7 +147,7 @@ void Dump (void)
           }
       }
 
-      switch (Options & M_ADDRESSES) {
+      switch ( Options & M_ADDRESSES) {
       case O_ADR_ADRPFIX:
 	fprintf (stdout, "%04X ", address);
 	break;
@@ -173,7 +173,7 @@ void Dump (void)
         addr = Memory[(ADDR_T)(address + 1)];
         fprintf (stdout, "%s #$%X\n", mne[instr->mnemonic], addr);
         break;
-      case abs:
+      case aabs:
       case absx:
       case absy:
       case iabs:
@@ -265,13 +265,14 @@ void Dump (void)
 	  break;
       }
 
-      if (IsLabeled (address))
-	if (Options & M_ADDRESSES)
+      if (IsLabeled (address)) {
+	if (Options & M_ADDRESSES) {
 	  fprintf (stdout, "%04X %s%s:\n", address, lineinfix,
 		   Label (address));
-	else
+	} else {
 	  fprintf (stdout, "%s:\n", Label (address));
-
+        }
+      }
       for (counter = size, addr = address + 1; --counter; addr++)
         if (IsLabeled (addr)) {
 	  if (Options & M_ADDRESSES)

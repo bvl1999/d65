@@ -32,6 +32,7 @@
 #define _MAIN_C_
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #ifdef __GNUC__
 #include <getopt.h>
 #endif /* __GNUC__ */
