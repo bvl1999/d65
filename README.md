@@ -2,6 +2,9 @@ d65 v0.2.1 -- symbolic 65xx disassembler
 Release date: 18th June, 1994 (opcode table patched 6th January, 2000)
 Copyright (C) 1993, 1994, 2000 Marko Mäkelä
 
+Small patch to make this compile on modern systems in July 2020 by 
+Bart van Leeuwen
+
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
