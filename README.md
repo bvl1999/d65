@@ -1,6 +1,6 @@
 d65 v0.2.1 -- symbolic 65xx disassembler
 Release date: 18th June, 1994 (opcode table patched 6th January, 2000)
-Copyright (C) 1993, 1994, 2000 Marko M‰kel‰
+Copyright (C) 1993, 1994, 2000 Marko M√§kel√§
 
 Small patch to make this compile on modern systems in July 2020 by 
 Bart van Leeuwen
@@ -335,4 +335,4 @@ the planned features.  The first version was functional enough to satisfy
 my needs, and I didn't get much feedback from users.  Maybe I will continue
 the development when I have retired in about 40 years, maybe not.
 
-Marko M‰kel‰ <Marko.Makela@NIC.FUNET.FI>
+Marko M√§kel√§: Marko.Makela AT NIC.FUNET.FI
